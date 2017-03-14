@@ -14,22 +14,24 @@
 </head>
 
 <body ng-controller="TopSpotsCtrl">
+    <div class="container">
 
-    <h1>SAN DIEGO TOP SPOTS</h1>
+        <h1>SAN DIEGO TOP SPOTS</h1>
 
-    <div>
-        <table class="table">
-            <tr>
-                <th>NAME</th>
-                <th>DESCRIPTION</th>
-                <th>LOCATION</th>
-            </tr>
-            <tr ng-repeat="topspot in topspots">
-                <td>{{ topspot.name }}</td>
-                <td>{{ topspot.description }}</td>
-                <td><a class="btn btn-primary" target="_blank" href="https://www.google.com/maps?q={{x.location[0]}},{{x.location[1]}}">See Map</a></td>
-            </tr>
-        </table>
+        <div>
+            <table class="table">
+                <tr>
+                    <th>NAME</th>
+                    <th>DESCRIPTION</th>
+                    <th>LOCATION</th>
+                </tr>
+                <tr ng-repeat="topspot in topspots">
+                    <td>{{ topspot.name }}</td>
+                    <td>{{ topspot.description }}</td>
+                    <td><a class="btn btn-primary" target="_blank" href="https://www.google.com/maps?q={{ topspot.location[0] }},{{ topspot.location[1] }}">See Map</a></td>
+                </tr>
+            </table>
+        </div>
     </div>
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
